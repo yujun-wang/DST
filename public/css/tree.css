@@ -1,0 +1,61 @@
+.tree-node {
+	border: 1px dotted blue;
+	background: #f8faff;
+	color: #7c9eb2;
+	background:none repeat scroll 0 0 #f7f9fa;
+	border:1px dashed #e4e5e7;
+	border-radius:3px;
+}
+
+.tree-node .btn {
+	min-width: 20px;
+	margin: 0 2px;
+	padding: 0;
+}
+
+.tree-node .btn-danger, .tree-node .btn-info {
+	min-width: 25px;
+}
+
+.tree-node .btn-hide-unhover {
+	visibility: hidden;
+}
+
+.tree-node:hover .btn-hide-unhover {
+	visibility: visible;
+}
+
+.tree-node-content {
+	margin: 5px 5px 5px 0;
+}
+
+.tree-node-title {
+	display: inline-block;
+}
+
+.tree-handle {
+	background: #428bca;
+	color: #FFF;
+	margin-right: 10px;
+	border:1px dashed #e4e5e7;
+}
+
+.angular-ui-tree-handle:hover {
+	cursor: move;
+}
+
+.angular-ui-tree-placeholder {
+	background: #f0f9ff;
+	border: 1px dashed #e4e5e7;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.angular-ui-tree-placeholder {
+	background: #f0f9ff;
+	border: 2px dashed #bed2db;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

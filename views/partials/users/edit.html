@@ -1,0 +1,108 @@
+<section id='content' ng-controller="userEditController">
+    <div class='container-fluid'>
+        <div class='row-fluid' style ="margin-top: 50px;height: 250px;">
+            <div class='span12 box'>
+                <div class='row'>
+                    <div class='col-sm-12'>
+                        <div class='box bordered-box red-border'>
+                            <div class='box-header red-background'>
+                                <div class='span6 title'>{{user.first_name + " " + user.last_name}}'s Profile</div>
+                            </div>
+                            <div class='box-content box-double-padding'>
+
+                                <div ng-if="displayMessage" class='alert alert-info'>
+                                    {{displayMessage}}
+                                </div>
+
+                                <form class='form' id="userForm" name="userForm" style='margin-bottom: 0;'>
+                                    <fieldset>
+                                        <div class='col-sm-4'>
+
+                                            <div class='box'>
+                                                <div class='lead'>
+                                                    <i class='icon-user contrast'></i>
+                                                    User Information
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-7 col-sm-offset-1'>
+
+                                            <div class='form-group'>
+                                                <label>Name</label>
+                                                <div class='row'>
+                                                    <div class='col-sm-6 col-md-6 col-lg-4'>
+                                                        <div class='input-group'>
+                                                            <input ng-model="user.first_name" class='form-control' id='first_name' placeholder='First Name' type='text' required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class='col-sm-6 col-md-6 col-lg-4'>
+                                                        <div class='input-group'>
+                                                            <input ng-model="user.last_name" class='form-control' id='last_name' placeholder='Last Name' type='text' required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class='form-group'>
+                                                <label>E-mail</label>
+                                                <input ng-model="user.username" class='form-control' id='username' placeholder='E-mail' type='text' disabled>
+                                            </div>
+
+                                            <div class='form-group'>
+                                                <label>Status</label>
+                                                <span ng-if="user.status == 'deleted'" class='label buttonLightBlue'>{{user.status | uppercase}}</span>
+                                                <span ng-if="user.status == 'active'" class='label buttonGreen'>{{user.status | uppercase}}</span>
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                    <hr class='hr-normal'>
+
+                                    <fieldset>
+                                        <div class='col-sm-4'>
+
+                                            <div class='box'>
+                                                <div class='lead'>
+                                                    <i class='icon-user contrast'></i>
+                                                    User Settings
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class='col-sm-7 col-sm-offset-1'>
+
+                                            <div class='form-group'>
+                                                <label>Role</label>
+                                                <select ng-model="user.role" class='form-control' id='inputSelect' ng-options="option.role as option.name for option in roles">
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                    <hr class='hr-normal'>
+
+                                    <div class='form-actions'>
+                                        <div class='row'>
+                                            <div class='col-sm-7 col-sm-offset-5'>
+
+                                                <button class='btn btn-success' ng-click="save()">
+                                                    UPDATE
+                                                </button>
+
+                                                <button class='btn' ng-click="back()">
+                                                    BACK
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
